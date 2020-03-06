@@ -1,0 +1,115 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: linear-gradient(237.09deg,#d89bfd -5.83%,#7db8fe 110.97%);
+}
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.slide-navigation{
+  list-style: none;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  li{
+    width: 21px;
+    height: 21px;
+    background: #FFFFFF;
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 0px 10px rgba(26, 81, 214, 0.09), -3px 0px 10px rgba(255, 255, 255, 0.09);
+    transition: 1s;
+    font-size: 12px;
+    opacity: 0.25;
+    a{
+      text-decoration: none;
+      color: #6274E0;
+    }
+    left: 50%;
+    top: 50%;
+  }
+  .is-active{
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+    opacity: 1;
+    font-size: 26px;
+  }
+}
+
+.is-active1{
+  li{
+    &:nth-child(1){
+      transform: translate(-50%, -50%);
+    }
+    &:nth-child(2){
+      transform: translate(150%, -50%);
+    }
+    &:nth-child(3){
+      transform: translate(100%, 100%);
+    }
+    &:nth-child(4){
+      transform: translate(-50%, 150%);
+    }
+  }
+}
+.is-active2{
+  li{
+    &:nth-child(3){
+      transform: translate(150%, -50%);
+    }
+    &:nth-child(2){
+      transform: translate(-50%, -50%);
+    }
+    &:nth-child(4){
+      transform: translate(100%, 100%);
+    }
+    &:nth-child(1){
+      transform: translate(-50%, 150%);
+    }
+  }
+}
+
+.is-active3{
+  li{
+    &:nth-child(4){
+      transform: translate(150%, -50%);
+    }
+    &:nth-child(3){
+      transform: translate(-50%, -50%);
+    }
+    &:nth-child(1){
+      transform: translate(100%, 100%);
+    }
+    &:nth-child(2){
+      transform: translate(-50%, 150%);
+    }
+  }
+}
+.is-active4{
+  li{
+    &:nth-child(1){
+      transform: translate(150%, -50%);
+    }
+    &:nth-child(4){
+      transform: translate(-50%, -50%);
+    }
+    &:nth-child(2){
+      transform: translate(100%, 100%);
+    }
+    &:nth-child(3){
+      transform: translate(-50%, 150%);
+    }
+  }
+}
